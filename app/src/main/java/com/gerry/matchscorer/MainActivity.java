@@ -7,6 +7,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final char TEAMA = 'A';
     private static final char TEAMB = 'B';
+
+    private TextView scoreTeamATextView;
+    private TextView scoreTeamBTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         Add_2Points_B.setOnClickListener(clickListener);
         Add_3Points_A.setOnClickListener(clickListener);
         Add_3Points_B.setOnClickListener(clickListener);
+
+        scoreTeamATextView = (TextView) findViewById(R.id.teamAScore_tv);
+        scoreTeamBTextView = (TextView) findViewById(R.id.teamBScore_tv);
 
         }
 
@@ -69,9 +76,11 @@ public class MainActivity extends AppCompatActivity {
         switch (team){
             case TEAMA:
                 mScoreA = mScoreA + points;
+                scoreTeamATextView.setText(String.valueOf(mScoreA));
                 break;
             case TEAMB:
                 mScoreB = mScoreB + points;
+                scoreTeamBTextView.setText(String.valueOf(mScoreB));
                 break;
         }
     }

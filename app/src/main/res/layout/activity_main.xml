@@ -30,9 +30,10 @@
                 android:layout_gravity="center_horizontal"
                 android:textAlignment="center"/>
             <TextView
+                android:id="@+id/teamAScore_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="11"
+                android:text="0"
                 android:layout_gravity="center_horizontal"
                 android:textAlignment="center"/>
             <Button
@@ -73,9 +74,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="11"
+                android:text="0"
                 android:layout_gravity="center_horizontal"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:id="@+id/teamBScore_tv"/>
             <Button
                 android:id="@+id/Add_3Points_B"
                 android:layout_width="match_parent"
